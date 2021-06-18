@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>truc cool</title>
+    <link href="stylesheet.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="VueDemo" :style="{backgroundColor: ArTransit}" class="transit">
+
+    <div class="buttonContainer">
+        <h1>Just a fancy Burger...</h1>
+        <h2>choose an ingredient to know which color is !!! magic no !!!</h2>
+        <img class="image" src="Burger.svg" alt="burger" />
+    </div>
+
+    <div v-for="button in buttonContainer" class="buttonContainer">
+        <a class="button" href="#" title="Yes, turtles." id="steack" @mouseover="ArTransit = button.couleur" @mouseout="ArTransit = ArPlan">{{button.text}}</a>
+    </div>
+
+</div>
+
+</body>
+
+<script>
+    new Vue({
+        el: '#VueDemo',
+        data: {
+            buttonContainer: [
+                {text: "steack", lien: "#", couleur: "#4A1F18FF"},
+                {text: "cheese", lien: "#", couleur: "#FBD46FFF"},
+                {text: "lettuce", lien: "#", couleur: "#76B62CFF"},
+            ],
+            ArPlan: "#847270",
+            ArTransit: "#847270",
+        },
+    });
+</script>
+</html>
